@@ -1,17 +1,7 @@
-# Ai TOP TECHNOLOGIES
+# Ai TOP TECHNOLOGIES Website
 
-A modern, futuristic website for Ai TOP TECHNOLOGIES - pioneering artificial intelligence solutions for global enterprises.
-
-## Features
-
-- **NextJS 14** with App Router
-- **TypeScript** for type safety
-- **Tailwind CSS** for styling with custom design system
-- **Space Grotesk** font for modern typography
-- **Glassmorphism** design elements
-- **Responsive** layout for all devices
-- **Dark theme** optimized for AI/tech industry
+A modern, responsive website built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## Getting Started
 
-Install dependencies:
+1. Install dependencies:
