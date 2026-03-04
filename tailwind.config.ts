@@ -9,19 +9,29 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'primary': '#0D244F',
-        'primary-light': '#1E40AF',
-        'accent': '#3B82F6',
-        'background': '#F7F8FA',
-        'card': '#FFFFFF',
-        'foreground': '#1F2937',
-        'muted-foreground': '#6B7280',
+        primary: {
+          50: '#eff6ff',
+          100: '#dbeafe',
+          200: '#bfdbfe',
+          300: '#93c5fd',
+          400: '#60a5fa',
+          500: '#3b82f6',
+          600: '#2563eb',
+          700: '#1d4ed8',
+          800: '#1e40af',
+          900: '#1e3a8a',
+        },
+        navy: {
+          800: '#1e3a5f',
+          900: '#0f2744',
+        },
       },
       fontFamily: {
-        sans: ['var(--font-poppins)'],
+        sans: ['Inter', 'sans-serif'],
       },
     },
   },
   plugins: [],
 };
+
 export default config;

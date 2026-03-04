@@ -1,50 +1,64 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { Menu, X } from "lucide-react";
-
-const navItems = [
-  { text: "Home", href: "/" },
-  { text: "About", href: "/about" },
-  { text: "Contact", href: "/contact" },
-];
+import { usePathname } from "next/navigation";
 
 export default function Header() {
-  const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  const navItems = [
+    { text: "Home", href: "/" },
+    { text: "About", href: "/about" },
+    { text: "Contact", href: "/contact" },
+  ];
 
   return (
-    <header className="bg-white/80 backdrop-blur-sm sticky top-0 z-50 shadow-sm">
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex justify-between items-center">
-          <Link href="/" className="text-lg font-bold text-primary">
-            AI TOP TECHNOLOGIES
-          </Link>
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link key={item.text} href={item.href} className="text-foreground hover:text-accent transition-colors">
-                {item.text}
-              </Link>
-            ))}
-          </nav>
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+    <header className="bg-navy-900 text-white py-4 px-6 sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-2">
+          <div className="flex items-center">
+            <span className="text-2xl font-bold text-primary-400">A</span>
+            <span className="text-2xl font-bold text-white">i</span>
+            <span className="text-2xl font-bold text-primary-400">T</span>
           </div>
-        </div>
+          <div className="flex flex-col leading-tight">
+            <span className="text-xs font-semibold tracking-wide">AI TOP</span>
+            <span className="text-xs font-semibold tracking-wide">TECHNOLOGIES</span>
+          </div>
+        </Link>
+
+        <nav className="hidden md:flex items-center gap-1">
+          <span className="text-gray-400 text-sm mr-4">Skip to Content</span>
+          <span className="text-gray-400 text-sm mr-4">Ai TOP TECHNOLOGIES</span>
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`px-4 py-2 text-sm font-medium transition-colors ${
+                pathname === item.href
+                  ? "text-white border-b-2 border-primary-400"
+                  : "text-gray-300 hover:text-white"
+              }`}
+            >
+              {item.text}
+            </Link>
+          ))}
+        </nav>
+
+        <nav className="flex md:hidden items-center gap-4">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`text-sm font-medium ${
+                pathname === item.href ? "text-white" : "text-gray-300"
+              }`}
+            >
+              {item.text}
+            </Link>
+          ))}
+        </nav>
       </div>
-      {isOpen && (
-        <div className="md:hidden bg-white">
-          <nav className="flex flex-col items-center space-y-4 py-4 border-t">
-            {navItems.map((item) => (
-              <Link key={item.text} href={item.href} onClick={() => setIsOpen(false)} className="text-foreground hover:text-accent transition-colors">
-                {item.text}
-              </Link>
-            ))}
-          </nav>
-        </div>
-      )}
     </header>
   );
 }

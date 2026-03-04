@@ -1,7 +1,17 @@
-import { redirect } from 'next/navigation';
+import Hero from "@/components/Hero";
+import VisionSection from "@/components/VisionSection";
+import StatsSection from "@/components/StatsSection";
+import LeadershipSection from "@/components/LeadershipSection";
+import ContactCTA from "@/components/ContactCTA";
 
-// The primary page in the mockup is the "About" page.
-// We will redirect the root path to /about for this project.
-export default function HomePage() {
-  redirect('/about');
+export default function Home() {
+  return (
+    <>
+      <Hero />
+      <VisionSection />
+      <StatsSection />
+      <LeadershipSection />
+      <ContactCTA />
+    </>
+  );
 }
