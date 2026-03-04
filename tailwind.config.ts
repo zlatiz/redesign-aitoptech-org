@@ -9,23 +9,17 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'brand-dark-blue': '#061532',
-        'brand-primary-blue': '#375DFB',
-        'brand-light-bg': '#F7F8FA',
-        'brand-card-bg': '#FFFFFF',
-        'brand-text-dark': '#1D232E',
-        'brand-text-light': '#FFFFFF',
-        'brand-text-secondary': '#5A6475',
-      },
-      backgroundImage: {
-        'hero-pattern': "url('/hero-bg.png')",
+        'primary': '#0D244F',
+        'primary-light': '#1E40AF',
+        'accent': '#3B82F6',
+        'background': '#F7F8FA',
+        'card': '#FFFFFF',
+        'foreground': '#1F2937',
+        'muted-foreground': '#6B7280',
       },
       fontFamily: {
-        sans: ['var(--font-inter)'],
+        sans: ['var(--font-poppins)'],
       },
-      boxShadow: {
-        'card': '0px 4px 20px rgba(0, 0, 0, 0.05)',
-      }
     },
   },
   plugins: [],
