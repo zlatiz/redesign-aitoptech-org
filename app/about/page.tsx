@@ -1,133 +1,117 @@
-import Link from "next/link";
-import type { Metadata } from "next";
+export default function AboutPage() {
+  const clientTypes = [
+    "Startups with complex infrastructure needs",
+    "Agencies that need scalable backends",
+    "Enterprises building new internal tools",
+  ];
 
-export const metadata: Metadata = {
-  title: "About — Ai TOP TECHNOLOGIES",
-  description: "Pioneering the Future of Artificial Intelligence",
-};
+  const values = [
+    "Simplicity over noise",
+    "Ethics before hype",
+    "Execution that scales",
+  ];
 
-export default function About() {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Page Header */}
-      <section className="border-b border-gray-200 py-12 md:py-16">
-        <div className="container-custom">
-          <h1 className="text-4xl md:text-5xl font-bold text-text">
-            About — Ai TOP TECHNOLOGIES
+    <div className="pt-32 pb-24">
+      <div className="container-custom">
+        {/* Page Title */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl md:text-6xl font-bold text-text mb-4">
+            About — Ai TOP
+            <br />
+            TECHNOLOGIES
           </h1>
+          <div className="w-24 h-1 bg-primary mx-auto mt-6"></div>
         </div>
-      </section>
 
-      {/* Main Content */}
-      <section className="section-padding">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
-            {/* Image/Visual Section */}
-            <div className="relative">
-              <div className="aspect-[4/3] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-lg overflow-hidden">
-                {/* Network visualization */}
-                <div className="absolute inset-0 opacity-40">
-                  <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                      <pattern id="about-grid" width="30" height="30" patternUnits="userSpaceOnUse">
-                        <circle cx="15" cy="15" r="1" fill="rgba(255,255,255,0.4)" />
-                      </pattern>
-                    </defs>
-                    <rect width="100%" height="100%" fill="url(#about-grid)" />
-                    <line x1="20%" y1="20%" x2="40%" y2="35%" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
-                    <line x1="40%" y1="35%" x2="60%" y2="30%" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
-                    <line x1="60%" y1="30%" x2="80%" y2="50%" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
-                    <line x1="30%" y1="60%" x2="50%" y2="70%" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
-                    <line x1="50%" y1="70%" x2="70%" y2="75%" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
-                    <circle cx="20%" cy="20%" r="4" fill="rgba(32, 157, 80, 0.8)" />
-                    <circle cx="40%" cy="35%" r="4" fill="rgba(32, 157, 80, 0.8)" />
-                    <circle cx="60%" cy="30%" r="4" fill="rgba(32, 157, 80, 0.8)" />
-                    <circle cx="80%" cy="50%" r="4" fill="rgba(32, 157, 80, 0.8)" />
-                    <circle cx="30%" cy="60%" r="4" fill="rgba(32, 157, 80, 0.8)" />
-                    <circle cx="50%" cy="70%" r="4" fill="rgba(32, 157, 80, 0.8)" />
-                    <circle cx="70%" cy="75%" r="4" fill="rgba(32, 157, 80, 0.8)" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            {/* Content Section */}
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-text mb-6">
-                Pioneering the Future of Artificial Intelligence
-              </h2>
-              
-              <div className="space-y-4 text-text">
-                <p className="text-base md:text-lg leading-relaxed">
-                  Ai Top Technologies LLC - Registered in Delaware, USA. We specialize in delivering cutting-edge AI solutions and infrastructure for modern enterprises.
-                </p>
-                
-                <p className="text-base md:text-lg leading-relaxed">
-                  We bridge the gap between complex machine learning algorithms and practical business applications.
-                </p>
-                
-                <p className="text-base md:text-lg leading-relaxed">
-                  With a team of world-class engineers and data scientists, we build scalable, secure, and highly efficient AI models tailored to transform industries ranging from finance to healthcare.
-                </p>
-              </div>
-
-              <Link href="/contact" className="btn-primary inline-block mt-8">
-                Get In Touch
-              </Link>
-            </div>
-          </div>
-
-          {/* Additional Info Sections */}
-          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-2xl font-bold text-text mb-6">
+        {/* Main Content */}
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-2xl shadow-xl p-12 md:p-16 border border-text/5">
+            {/* About Section */}
+            <div className="mb-12">
+              <h2 className="text-3xl font-bold text-text mb-6 text-center">
                 About AI Top Technologies
-              </h3>
-              <p className="text-base text-text leading-relaxed mb-4">
-                Founded by a cross-functional team of engineers, advisors, and project managers, AiTT supports mission-driven ventures through the full technology lifecycle — from architecture and compliance to AI integration and deployment.
+              </h2>
+              <p className="text-text/80 text-lg leading-relaxed text-center max-w-3xl mx-auto">
+                AI TOP TECHNOLOGIES is dedicated to pioneering premium artificial intelligence
+                solutions that empower businesses. Our approach blends cutting-edge technical
+                expertise with strategic thinking, ensuring that our solutions not only solve complex problems but do so with an intuitive grace that elevates
+                the user experience.
               </p>
-              
-              <h4 className="text-lg font-semibold text-text mt-6 mb-3">
+            </div>
+
+            {/* Company Registration Info */}
+            <div className="bg-primary/5 rounded-xl p-8 mb-12 text-center border border-primary/10">
+              <p className="text-primary font-bold text-xl mb-1">
+                Ai Top Technologies LLC
+              </p>
+              <p className="text-text/60 text-sm uppercase tracking-wider">
+                REGISTERED IN DELAWARE, USA
+              </p>
+            </div>
+
+            {/* Who We Work With */}
+            <div className="mb-12">
+              <h3 className="text-2xl font-bold text-text mb-6">
                 Who we work with:
-              </h4>
-              <ul className="space-y-2 text-base text-text">
-                <li className="flex items-start">
-                  <span className="text-accent-green mr-2">•</span>
-                  Startups with complex infrastructure needs
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent-green mr-2">•</span>
-                  Agencies that need scalable backends
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent-green mr-2">•</span>
-                  Enterprises building new internal tools
-                </li>
+              </h3>
+              <ul className="space-y-4">
+                {clientTypes.map((client, index) => (
+                  <li key={index} className="flex items-start gap-4">
+                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 13l4 4L19 7"
+                          stroke="white"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-text/80 text-lg">{client}</span>
+                  </li>
+                ))}
               </ul>
             </div>
 
+            {/* Our Values */}
             <div>
-              <h4 className="text-lg font-semibold text-text mb-3">
-                Our Values:
-              </h4>
-              <ul className="space-y-2 text-base text-text">
-                <li className="flex items-start">
-                  <span className="text-accent-green mr-2">•</span>
-                  Simplicity over noise
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent-green mr-2">•</span>
-                  Ethics before hype
-                </li>
-                <li className="flex items-start">
-                  <span className="text-accent-green mr-2">•</span>
-                  Execution that scales
-                </li>
+              <h3 className="text-2xl font-bold text-text mb-6">Our Values:</h3>
+              <ul className="space-y-4">
+                {values.map((value, index) => (
+                  <li key={index} className="flex items-start gap-4">
+                    <div className="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M5 13l4 4L19 7"
+                          stroke="white"
+                          strokeWidth="3"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </div>
+                    <span className="text-text/80 text-lg">{value}</span>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 }

@@ -1,27 +1,21 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
 export const metadata: Metadata = {
   title: "Ai TOP TECHNOLOGIES",
-  description: "Ai Top Technologies LLC - Registered in Delaware, USA",
+  description: "Pioneering advanced artificial intelligence solutions for tomorrow's enterprises.",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} font-sans antialiased`}>
+      <body>
         <Header />
         <main>{children}</main>
         <Footer />

@@ -1,6 +1,6 @@
 # Ai TOP TECHNOLOGIES
 
-A modern, professional website for Ai Top Technologies LLC built with Next.js 14, TypeScript, and Tailwind CSS.
+A modern, premium website for Ai TOP TECHNOLOGIES built with Next.js 14, TypeScript, and Tailwind CSS.
 
 ## Getting Started
 
@@ -31,13 +31,10 @@ npm start
 - `/components` - Reusable React components
 - `/public` - Static assets
 
-## Tech Stack
+## Technologies
 
 - Next.js 14
+- React 18
 - TypeScript
 - Tailwind CSS
-- React 18
-
-## License
-
-© 2025 Ai Top Technologies LLC. All rights reserved.
+- Manrope Font Family

@@ -2,13 +2,13 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t border-gray-200">
-      <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+    <footer className="bg-background border-t border-text/10 mt-24">
+      <div className="container-custom py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Company Info */}
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-6 h-6 bg-accent-green rounded flex items-center justify-center">
+              <div className="w-6 h-6 bg-primary rounded-sm flex items-center justify-center">
                 <svg
                   width="16"
                   height="16"
@@ -17,61 +17,81 @@ export default function Footer() {
                   xmlns="http://www.w3.org/2000/svg"
                 >
                   <path
-                    d="M13 2L3 14h8l-1 8 10-12h-8l1-8z"
+                    d="M12 2L2 7L12 12L22 7L12 2Z"
                     fill="white"
+                    fillOpacity="0.9"
+                  />
+                  <path
+                    d="M2 17L12 22L22 17"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M2 12L12 17L22 12"
+                    stroke="white"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
               </div>
-              <span className="text-sm font-semibold text-text">
-                Ai TOP TECHNOLOGIES
+              <span className="text-text font-bold text-sm tracking-wide uppercase">
+                AI TOP TECHNOLOGIES
               </span>
             </div>
-            <p className="text-sm text-text mb-2">
-              Ai Top Technologies LLC
-            </p>
-            <p className="text-sm text-text mb-4">
-              Registered in Delaware, USA
-            </p>
-            <a
-              href="mailto:info@aitoptech.org"
-              className="text-sm text-accent-green hover:underline"
-            >
-              info@aitoptech.org
-            </a>
+            <div className="text-sm text-text/70 space-y-1">
+              <p className="font-semibold">Ai Top Technologies LLC</p>
+              <p>Registered in Delaware, USA</p>
+            </div>
           </div>
 
-          {/* Links */}
-          <div className="flex gap-8">
-            <div>
-              <Link
-                href="/privacy"
-                className="text-sm text-text hover:text-accent-green block mb-2"
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-sm font-bold uppercase tracking-wide mb-4 text-text">
+              Contact
+            </h3>
+            <div className="space-y-2">
+              <a
+                href="mailto:info@aitoptech.org"
+                className="text-sm text-text/70 hover:text-primary transition-colors block"
               >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-sm text-text hover:text-accent-green block"
-              >
-                Terms of Service
-              </Link>
+                info@aitoptech.org
+              </a>
             </div>
           </div>
 
           {/* CTA */}
           <div>
-            <p className="text-sm text-text mb-3">Have a project in mind?</p>
-            <Link href="/contact" className="btn-primary inline-block">
+            <p className="text-sm text-text/70 mb-4">Have a project in mind?</p>
+            <Link
+              href="/contact"
+              className="inline-block px-6 py-3 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-dark transition-all transform hover:scale-105 uppercase tracking-wide"
+            >
               CONNECT
             </Link>
           </div>
         </div>
 
-        {/* Copyright */}
-        <div className="mt-12 pt-8 border-t border-gray-200">
-          <p className="text-sm text-text text-center">
-            © 2025 Ai Top Technologies LLC. All rights reserved.
-          </p>
+        {/* Footer Bottom */}
+        <div className="pt-8 border-t border-text/10">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-text/60">
+            <div className="flex items-center gap-6">
+              <Link href="#" className="hover:text-primary transition-colors">
+                PRIVACY POLICY
+              </Link>
+              <Link href="#" className="hover:text-primary transition-colors">
+                TERMS OF SERVICE
+              </Link>
+              <Link href="#" className="hover:text-primary transition-colors">
+                LEGAL
+              </Link>
+            </div>
+            <div className="text-center md:text-right">
+              <p>© 2025 Ai TOP TECHNOLOGIES LLC. All rights reserved.</p>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
