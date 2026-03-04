@@ -1,44 +1,133 @@
-export default function AboutPage() {
+import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About — Ai TOP TECHNOLOGIES",
+  description: "Pioneering the Future of Artificial Intelligence",
+};
+
+export default function About() {
   return (
-    <section className="px-10 lg:px-40 py-16">
-      <div className="max-w-[1200px] mx-auto">
-        <div className="border-l-4 border-primary pl-6">
-          <h1 className="text-text-primary text-4xl lg:text-5xl font-bold leading-tight tracking-tight pb-6 uppercase">
-            About Us
+    <div className="min-h-screen bg-background">
+      {/* Page Header */}
+      <section className="border-b border-gray-200 py-12 md:py-16">
+        <div className="container-custom">
+          <h1 className="text-4xl md:text-5xl font-bold text-text">
+            About — Ai TOP TECHNOLOGIES
           </h1>
-          <div className="space-y-6 text-text-secondary text-lg font-normal leading-relaxed max-w-3xl">
-            <p>
-              Ai Top Technologies LLC is registered in Delaware, USA. We are
-              committed to delivering cutting-edge artificial intelligence and
-              technological frameworks that empower enterprise-scale
-              transformation globally.
-            </p>
-            <p>
-              Our mission is to pioneer intelligent solutions for a connected
-              tomorrow. We specialize in artificial intelligence, machine
-              learning, and advanced technological frameworks that help
-              businesses transform and scale their operations.
-            </p>
-            <p>
-              With a focus on innovation and excellence, we work with
-              enterprises worldwide to implement cutting-edge solutions that
-              drive meaningful business outcomes and create lasting value.
-            </p>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <section className="section-padding">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+            {/* Image/Visual Section */}
+            <div className="relative">
+              <div className="aspect-[4/3] bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-lg overflow-hidden">
+                {/* Network visualization */}
+                <div className="absolute inset-0 opacity-40">
+                  <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <pattern id="about-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                        <circle cx="15" cy="15" r="1" fill="rgba(255,255,255,0.4)" />
+                      </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#about-grid)" />
+                    <line x1="20%" y1="20%" x2="40%" y2="35%" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
+                    <line x1="40%" y1="35%" x2="60%" y2="30%" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
+                    <line x1="60%" y1="30%" x2="80%" y2="50%" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
+                    <line x1="30%" y1="60%" x2="50%" y2="70%" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
+                    <line x1="50%" y1="70%" x2="70%" y2="75%" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5" />
+                    <circle cx="20%" cy="20%" r="4" fill="rgba(32, 157, 80, 0.8)" />
+                    <circle cx="40%" cy="35%" r="4" fill="rgba(32, 157, 80, 0.8)" />
+                    <circle cx="60%" cy="30%" r="4" fill="rgba(32, 157, 80, 0.8)" />
+                    <circle cx="80%" cy="50%" r="4" fill="rgba(32, 157, 80, 0.8)" />
+                    <circle cx="30%" cy="60%" r="4" fill="rgba(32, 157, 80, 0.8)" />
+                    <circle cx="50%" cy="70%" r="4" fill="rgba(32, 157, 80, 0.8)" />
+                    <circle cx="70%" cy="75%" r="4" fill="rgba(32, 157, 80, 0.8)" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            {/* Content Section */}
+            <div>
+              <h2 className="text-3xl md:text-4xl font-bold text-text mb-6">
+                Pioneering the Future of Artificial Intelligence
+              </h2>
+              
+              <div className="space-y-4 text-text">
+                <p className="text-base md:text-lg leading-relaxed">
+                  Ai Top Technologies LLC - Registered in Delaware, USA. We specialize in delivering cutting-edge AI solutions and infrastructure for modern enterprises.
+                </p>
+                
+                <p className="text-base md:text-lg leading-relaxed">
+                  We bridge the gap between complex machine learning algorithms and practical business applications.
+                </p>
+                
+                <p className="text-base md:text-lg leading-relaxed">
+                  With a team of world-class engineers and data scientists, we build scalable, secure, and highly efficient AI models tailored to transform industries ranging from finance to healthcare.
+                </p>
+              </div>
+
+              <Link href="/contact" className="btn-primary inline-block mt-8">
+                Get In Touch
+              </Link>
+            </div>
+          </div>
+
+          {/* Additional Info Sections */}
+          <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-bold text-text mb-6">
+                About AI Top Technologies
+              </h3>
+              <p className="text-base text-text leading-relaxed mb-4">
+                Founded by a cross-functional team of engineers, advisors, and project managers, AiTT supports mission-driven ventures through the full technology lifecycle — from architecture and compliance to AI integration and deployment.
+              </p>
+              
+              <h4 className="text-lg font-semibold text-text mt-6 mb-3">
+                Who we work with:
+              </h4>
+              <ul className="space-y-2 text-base text-text">
+                <li className="flex items-start">
+                  <span className="text-accent-green mr-2">•</span>
+                  Startups with complex infrastructure needs
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-green mr-2">•</span>
+                  Agencies that need scalable backends
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-green mr-2">•</span>
+                  Enterprises building new internal tools
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-lg font-semibold text-text mb-3">
+                Our Values:
+              </h4>
+              <ul className="space-y-2 text-base text-text">
+                <li className="flex items-start">
+                  <span className="text-accent-green mr-2">•</span>
+                  Simplicity over noise
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-green mr-2">•</span>
+                  Ethics before hype
+                </li>
+                <li className="flex items-start">
+                  <span className="text-accent-green mr-2">•</span>
+                  Execution that scales
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-
-        <div className="mt-16 border-l-4 border-primary pl-6">
-          <h2 className="text-text-primary text-3xl font-bold leading-tight tracking-tight pb-4 uppercase">
-            Our Commitment
-          </h2>
-          <p className="text-text-secondary text-lg font-normal leading-relaxed max-w-3xl">
-            We are dedicated to empowering enterprise-scale transformation
-            through innovative artificial intelligence and technological
-            solutions. Our team of experts works tirelessly to deliver
-            world-class services and products.
-          </p>
-        </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }

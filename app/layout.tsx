@@ -1,18 +1,17 @@
 import type { Metadata } from "next";
-import { Space_Grotesk } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const spaceGrotesk = Space_Grotesk({
+const inter = Inter({ 
   subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
   title: "Ai TOP TECHNOLOGIES",
-  description: "Pioneering intelligent solutions for a connected tomorrow.",
+  description: "Ai Top Technologies LLC - Registered in Delaware, USA",
 };
 
 export default function RootLayout({
@@ -22,18 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${spaceGrotesk.variable} font-display antialiased bg-background-light text-text-primary`}
-      >
-        <div className="relative flex min-h-screen w-full flex-col">
-          <div className="flex h-full flex-col">
-            <Header />
-            <main id="page" className="flex-1">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </div>
+      <body className={`${inter.variable} font-sans antialiased`}>
+        <Header />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

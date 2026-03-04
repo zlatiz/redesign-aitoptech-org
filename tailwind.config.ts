@@ -9,19 +9,30 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: "#18a54e",
-        "background-light": "#e1dfd9",
-        "background-dark": "#112117",
-        "text-primary": "#0f1a14",
-        "text-secondary": "#4a6254",
-        "hero-overlay": "#112117",
+        primary: {
+          DEFAULT: "#209d50",
+          dark: "#13aa4d",
+        },
+        background: {
+          DEFAULT: "rgb(225, 223, 217)",
+          light: "#ffffff",
+        },
+        text: {
+          DEFAULT: "rgb(29, 35, 28)",
+          light: "rgb(255, 255, 255)",
+        },
+        accent: {
+          green: "rgb(32, 157, 80)",
+        },
       },
       fontFamily: {
-        display: ["var(--font-space-grotesk)"],
+        sans: ["var(--font-inter)"],
+      },
+      borderRadius: {
+        DEFAULT: "8px",
       },
     },
   },
   plugins: [],
 };
-
 export default config;
