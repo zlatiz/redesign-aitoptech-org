@@ -1,171 +1,100 @@
-import Hero from '@/components/Hero';
+import Button from "@/components/ui/Button";
+import TargetIcon from "@/components/icons/TargetIcon";
+import LightbulbIcon from "@/components/icons/LightbulbIcon";
+import BriefcaseIcon from "@/components/icons/BriefcaseIcon";
 
-export const metadata = {
-  title: 'About — Ai TOP TECHNOLOGIES',
-  description: 'Founded by a cross-functional team of engineers, advisors, and project managers',
-};
+const valueCards = [
+  {
+    icon: <TargetIcon />,
+    text: "Simplicity over noise",
+  },
+  {
+    icon: <LightbulbIcon />,
+    text: "Ethics before hype",
+  },
+  {
+    icon: <BriefcaseIcon />,
+    text: "Execution that scales",
+  },
+];
 
-export default function About() {
+const stats = [
+  {
+    value: "100+",
+    label: "CLIENTS SERVED",
+  },
+  {
+    value: "50+",
+    label: "INNOVATIVE SOLUTIONS",
+  },
+  {
+    value: "10+",
+    label: "YEARS EXPERIENCE",
+  },
+];
+
+export default function AboutPage() {
   return (
     <>
-      <Hero
-        title="About — Ai TOP TECHNOLOGIES"
-        ctaText="Learn More About Us"
-        ctaLink="#mission"
-      />
-
-      {/* Main Content Section */}
-      <section id="mission" className="py-20">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          {/* About AI Top Technologies */}
-          <div className="mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              About AI Top Technologies
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Founded by a cross-functional team of engineers, advisors, and project managers, AiTT supports mission-driven ventures through the full technology lifecycle — from architecture and compliance to AI integration and deployment.
-            </p>
-          </div>
-
-          {/* Who we work with */}
-          <div className="mb-16">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">
-              Who we work with:
-            </h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <svg
-                  className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                <span className="text-lg text-gray-700">
-                  Startups with complex infrastructure needs
-                </span>
-              </li>
-              <li className="flex items-start">
-                <svg
-                  className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                <span className="text-lg text-gray-700">
-                  Agencies that need scalable backends
-                </span>
-              </li>
-              <li className="flex items-start">
-                <svg
-                  className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                <span className="text-lg text-gray-700">
-                  Enterprises building new internal tools
-                </span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Our Values */}
-          <div className="mb-16">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6">
-              Our Values:
-            </h3>
-            <ul className="space-y-4">
-              <li className="flex items-start">
-                <svg
-                  className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                <span className="text-lg text-gray-700">
-                  Simplicity over noise
-                </span>
-              </li>
-              <li className="flex items-start">
-                <svg
-                  className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                <span className="text-lg text-gray-700">
-                  Ethics before hype
-                </span>
-              </li>
-              <li className="flex items-start">
-                <svg
-                  className="w-6 h-6 text-blue-600 mr-3 flex-shrink-0 mt-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M5 13l4 4L19 7"
-                  />
-                </svg>
-                <span className="text-lg text-gray-700">
-                  Execution that scales
-                </span>
-              </li>
-            </ul>
+      {/* Hero Section */}
+      <section className="relative bg-brand-dark-blue bg-hero-pattern bg-cover bg-center text-brand-text-light">
+        <div className="absolute inset-0 bg-brand-dark-blue opacity-80"></div>
+        <div className="relative container mx-auto px-6 py-32 md:py-48 text-left">
+          <h1 className="text-5xl md:text-7xl font-bold max-w-3xl leading-tight">
+            About — Ai TOP TECHNOLOGIES
+          </h1>
+          <div className="mt-8">
+            <Button>Primary call-to-action</Button>
           </div>
         </div>
       </section>
 
-      {/* Company Info Banner */}
-      <section className="py-12 bg-gradient-to-br from-blue-600 to-purple-900 text-white">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <h3 className="text-2xl font-bold mb-2">Ai Top Technologies LLC</h3>
-          <p className="text-blue-100 mb-4">Registered in Delaware, USA</p>
-          <a
-            href="mailto:info@aitoptech.org"
-            className="text-lg text-white hover:text-blue-200 underline transition-colors"
-          >
-            info@aitoptech.org
-          </a>
+      {/* Values Section */}
+      <section className="py-20 bg-brand-card-bg">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {valueCards.map((card, index) => (
+              <div key={index} className="bg-white p-8 rounded-2xl shadow-card border border-gray-100 flex flex-col items-start text-left">
+                <div className="bg-blue-100 p-3 rounded-full mb-6">
+                  {card.icon}
+                </div>
+                <h3 className="text-xl font-bold text-brand-text-dark">
+                  {card.text}
+                </h3>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-brand-light-bg">
+        <div className="container mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <p className="text-6xl font-bold text-brand-dark-blue">{stat.value}</p>
+                <p className="mt-2 text-sm font-semibold text-brand-text-secondary tracking-widest">{stat.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Remaining Content Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6 max-w-4xl text-left">
+          <h2 className="text-3xl font-bold text-brand-text-dark mb-4">About AI Top Technologies</h2>
+          <p className="text-brand-text-secondary leading-relaxed mb-8">
+            Founded by a cross-functional team of engineers, advisors, and project managers, AiTT supports mission-driven ventures through the full technology lifecycle — from architecture and compliance to AI integration and deployment.
+          </p>
+          
+          <h3 className="text-2xl font-bold text-brand-text-dark mt-12 mb-4">Who we work with:</h3>
+          <ul className="list-disc list-inside space-y-2 text-brand-text-secondary">
+            <li>Startups with complex infrastructure needs</li>
+            <li>Agencies that need scalable backends</li>
+            <li>Enterprises building new internal tools</li>
+          </ul>
         </div>
       </section>
     </>

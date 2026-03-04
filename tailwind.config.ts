@@ -9,9 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'brand-dark-blue': '#061532',
+        'brand-primary-blue': '#375DFB',
+        'brand-light-bg': '#F7F8FA',
+        'brand-card-bg': '#FFFFFF',
+        'brand-text-dark': '#1D232E',
+        'brand-text-light': '#FFFFFF',
+        'brand-text-secondary': '#5A6475',
       },
+      backgroundImage: {
+        'hero-pattern': "url('/hero-bg.png')",
+      },
+      fontFamily: {
+        sans: ['var(--font-inter)'],
+      },
+      boxShadow: {
+        'card': '0px 4px 20px rgba(0, 0, 0, 0.05)',
+      }
     },
   },
   plugins: [],
