@@ -1,139 +1,102 @@
-import Link from "next/link";
-
-export const metadata = {
-  title: "Contact — Ai TOP TECHNOLOGIES",
-  description: "Get in touch with Ai Top Technologies for AI solutions and technology consulting.",
-};
-
-export default function ContactPage() {
+export default function Contact() {
   return (
-    <>
-      {/* Hero Section */}
-      <section className="relative min-h-[50vh] bg-hero-gradient overflow-hidden pt-20 flex items-center">
-        <div className="absolute inset-0">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-primary-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-cyan/10 rounded-full blur-3xl" />
-        </div>
-        
-        <div className="section-container relative z-10 py-20">
-          <div className="text-center text-white">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Contact <span className="text-gradient">Us</span>
-            </h1>
-            <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Have a project in mind? We&apos;d love to hear from you.
-            </p>
-          </div>
-        </div>
-      </section>
+    <div className="max-w-7xl mx-auto px-4 md:px-8 py-20">
+      <div className="max-w-3xl mx-auto">
+        <h1 className="text-4xl md:text-6xl font-black tracking-tighter mb-6 text-center">
+          <span className="text-gradient">Contact Us</span>
+        </h1>
 
-      {/* Contact Content */}
-      <section className="py-20 bg-surface-light">
-        <div className="section-container">
-          <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact Info */}
-            <div>
-              <h2 className="text-3xl font-bold text-text-primary mb-6">Get in Touch</h2>
-              <p className="text-text-secondary mb-8 leading-relaxed">
-                Founded by a cross-functional team of engineers, advisors, and project managers, 
-                AiTT supports mission-driven ventures through the full technology lifecycle — 
-                from architecture and compliance to AI integration and deployment.
-              </p>
+        <p className="text-center text-slate-300 text-lg mb-12">Have a project in mind?</p>
 
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-text-primary">Location</h3>
-                    <p className="text-text-secondary">Ai Top Technologies LLC</p>
-                    <p className="text-text-secondary">Registered in Delaware, USA</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center text-primary-600">
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-text-primary">Email</h3>
-                    <a href="mailto:info@aitoptech.org" className="text-primary-600 hover:text-primary-700 transition-colors">
-                      info@aitoptech.org
-                    </a>
-                  </div>
-                </div>
+        <div className="glassmorphism rounded-2xl p-8 md:p-12">
+          <div className="space-y-8">
+            <div className="flex items-start gap-4">
+              <div className="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary flex-shrink-0">
+                <span className="material-symbols-outlined">mail</span>
               </div>
-
-              <div className="mt-12">
-                <h3 className="font-semibold text-text-primary mb-4">Who we work with:</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-center gap-3 text-text-secondary">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full" />
-                    Startups with complex infrastructure needs
-                  </li>
-                  <li className="flex items-center gap-3 text-text-secondary">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full" />
-                    Agencies that need scalable backends
-                  </li>
-                  <li className="flex items-center gap-3 text-text-secondary">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full" />
-                    Enterprises building new internal tools
-                  </li>
-                </ul>
+              <div>
+                <h3 className="font-bold text-lg mb-2">Email</h3>
+                <a
+                  href="mailto:info@aitoptech.org"
+                  className="text-slate-300 hover:text-primary transition-colors"
+                >
+                  info@aitoptech.org
+                </a>
               </div>
             </div>
 
-            {/* Contact Form */}
-            <div className="card p-8">
-              <h3 className="text-2xl font-bold text-text-primary mb-6">Send us a message</h3>
-              <form className="space-y-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-text-primary mb-2">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none"
-                    placeholder="Your name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-text-primary mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none"
-                    placeholder="your@email.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-text-primary mb-2">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={5}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-200 transition-all outline-none resize-none"
-                    placeholder="Tell us about your project..."
-                  />
-                </div>
-                <button type="submit" className="btn-primary w-full">
-                  CONNECT
-                </button>
-              </form>
+            <div className="flex items-start gap-4">
+              <div className="size-12 rounded-lg bg-accent/20 flex items-center justify-center text-accent flex-shrink-0">
+                <span className="material-symbols-outlined">business</span>
+              </div>
+              <div>
+                <h3 className="font-bold text-lg mb-2">Company</h3>
+                <p className="text-slate-300">Ai Top Technologies LLC</p>
+                <p className="text-slate-400 text-sm">Registered in Delaware, USA</p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="size-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary flex-shrink-0">
+                <span className="material-symbols-outlined">support_agent</span>
+              </div>
+              <div>
+                <h3 className="font-bold text-lg mb-2">Support</h3>
+                <p className="text-slate-300">24/7 Support Available</p>
+                <p className="text-slate-400 text-sm">We&apos;re here to help with your AI initiatives</p>
+              </div>
             </div>
           </div>
+
+          <div className="mt-12 pt-8 border-t border-slate-700">
+            <h3 className="font-bold text-xl mb-6 text-center">Ready to Get Started?</h3>
+            <form className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"
+                  placeholder="Your name"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors"
+                  placeholder="your@email.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={5}
+                  className="w-full px-4 py-3 rounded-lg bg-slate-800/50 border border-slate-700 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50 transition-colors resize-none"
+                  placeholder="Tell us about your project..."
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="w-full px-8 py-4 rounded-lg bg-gradient-to-r from-primary to-accent text-white font-bold text-lg hover:opacity-90 transition-opacity shadow-[0_0_20px_rgba(60,131,246,0.5)]"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }

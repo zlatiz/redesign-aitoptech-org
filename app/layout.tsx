@@ -1,17 +1,18 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ 
+const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
-  variable: '--font-inter',
+  variable: "--font-space-grotesk",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "About — Ai TOP TECHNOLOGIES",
-  description: "Transforming industries with cutting-edge artificial intelligence and advanced technology solutions.",
+  title: "Ai TOP TECHNOLOGIES",
+  description: "Pioneering the next generation of artificial intelligence solutions for global enterprises.",
 };
 
 export default function RootLayout({
@@ -20,13 +21,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className={`${inter.className} bg-surface-light`}>
-        <a href="#page" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary-600 text-white px-4 py-2 rounded-md z-50">
-          Skip to Content
-        </a>
+    <html lang="en" className="dark">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body className={`${spaceGrotesk.variable} font-display antialiased min-h-screen flex flex-col`}>
         <Header />
-        <main id="page">
+        <main className="flex-1" id="page">
           {children}
         </main>
         <Footer />
