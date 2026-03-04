@@ -5,16 +5,15 @@
 :root {
   --background: #e1dfd9;
   --foreground: #1d231c;
+  --primary: #209d50;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: var(--font-inter), system-ui, sans-serif;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
 }

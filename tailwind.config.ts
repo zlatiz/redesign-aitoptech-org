@@ -9,32 +9,32 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "#e1dfd9",
-        foreground: "#1d231c",
         primary: {
-          DEFAULT: "#18a54e",
-          50: "#e8f7ee",
-          100: "#c5ebd7",
-          200: "#9fdebe",
-          300: "#79d1a5",
-          400: "#5cc692",
-          500: "#3fbb7f",
-          600: "#35a56e",
-          700: "#2a8c5a",
-          800: "#1f7447",
-          900: "#145c34",
+          50: '#e8f5ee',
+          100: '#c2e4d1',
+          200: '#9ad3b4',
+          300: '#72c297',
+          400: '#4ab17a',
+          500: '#209d50',
+          600: '#1a7d40',
+          700: '#155e30',
+          800: '#0f3e20',
+          900: '#0a1f10',
         },
-        accent: "#209d50",
-        muted: {
-          DEFAULT: "#6b7268",
-          foreground: "#4a4f47",
+        background: {
+          light: '#e1dfd9',
+          dark: '#1d231c',
         },
+        hero: {
+          DEFAULT: '#1a3a2e',
+          light: '#234a3c',
+        }
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
+        sans: ['var(--font-space-grotesk)', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
-        DEFAULT: "8px",
+        'DEFAULT': '8px',
       },
     },
   },
