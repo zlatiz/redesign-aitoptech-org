@@ -2,18 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #e1dfd9;
-  --foreground: #1d231c;
-  --primary: #209d50;
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-}
-
-/* Smooth scroll for anchor links */
-html {
-  scroll-behavior: smooth;
+  background-color: #e1dfd9;
 }

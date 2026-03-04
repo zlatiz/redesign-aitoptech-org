@@ -1,44 +1,44 @@
 export default function AboutPage() {
   return (
-    <div className="max-w-4xl mx-auto px-6 py-20">
-      <h1 className="text-4xl md:text-5xl font-bold text-background-dark mb-8">
-        About
-      </h1>
-      
-      <div className="prose prose-lg max-w-none">
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          Ai Top Technologies LLC is registered in Delaware, USA, and specializes in 
-          cutting-edge artificial intelligence solutions for businesses worldwide.
-        </p>
-        
-        <h2 className="text-2xl font-semibold text-background-dark mt-12 mb-4">
-          Our Mission
-        </h2>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          We are dedicated to advancing the field of artificial intelligence through 
-          innovative research and practical applications that drive business value.
-        </p>
-
-        <h2 className="text-2xl font-semibold text-background-dark mt-12 mb-4">
-          Our Expertise
-        </h2>
-        <p className="text-gray-700 leading-relaxed mb-6">
-          With deep expertise in machine learning, cloud computing, and secure data 
-          processing, we help organizations harness the power of AI to transform their 
-          operations and achieve their strategic objectives.
-        </p>
-
-        <div className="bg-white rounded-lg p-8 shadow-md mt-12">
-          <h3 className="text-xl font-semibold text-background-dark mb-4">
-            Company Information
-          </h3>
-          <div className="space-y-2 text-gray-700">
-            <p><strong>Legal Name:</strong> Ai Top Technologies LLC</p>
-            <p><strong>Registration:</strong> Delaware, USA</p>
-            <p><strong>Email:</strong> <a href="mailto:info@aitoptech.org" className="text-primary-500 hover:underline">info@aitoptech.org</a></p>
+    <section className="px-10 lg:px-40 py-16">
+      <div className="max-w-[1200px] mx-auto">
+        <div className="border-l-4 border-primary pl-6">
+          <h1 className="text-text-primary text-4xl lg:text-5xl font-bold leading-tight tracking-tight pb-6 uppercase">
+            About Us
+          </h1>
+          <div className="space-y-6 text-text-secondary text-lg font-normal leading-relaxed max-w-3xl">
+            <p>
+              Ai Top Technologies LLC is registered in Delaware, USA. We are
+              committed to delivering cutting-edge artificial intelligence and
+              technological frameworks that empower enterprise-scale
+              transformation globally.
+            </p>
+            <p>
+              Our mission is to pioneer intelligent solutions for a connected
+              tomorrow. We specialize in artificial intelligence, machine
+              learning, and advanced technological frameworks that help
+              businesses transform and scale their operations.
+            </p>
+            <p>
+              With a focus on innovation and excellence, we work with
+              enterprises worldwide to implement cutting-edge solutions that
+              drive meaningful business outcomes and create lasting value.
+            </p>
           </div>
         </div>
+
+        <div className="mt-16 border-l-4 border-primary pl-6">
+          <h2 className="text-text-primary text-3xl font-bold leading-tight tracking-tight pb-4 uppercase">
+            Our Commitment
+          </h2>
+          <p className="text-text-secondary text-lg font-normal leading-relaxed max-w-3xl">
+            We are dedicated to empowering enterprise-scale transformation
+            through innovative artificial intelligence and technological
+            solutions. Our team of experts works tirelessly to deliver
+            world-class services and products.
+          </p>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

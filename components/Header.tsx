@@ -1,103 +1,62 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-  const navLinks = [
-    { text: "Home", href: "/" },
-    { text: "About", href: "/about" },
-    { text: "Contact", href: "/contact" },
-  ];
-
   return (
-    <header className="bg-background-light border-b border-gray-300">
-      <nav className="max-w-7xl mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-primary-500 rounded-full flex items-center justify-center">
-              <svg 
-                className="w-5 h-5 text-white" 
-                fill="none" 
-                viewBox="0 0 24 24" 
-                stroke="currentColor"
-              >
-                <path 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round" 
-                  strokeWidth={2} 
-                  d="M13 10V3L4 14h7v7l9-11h-7z" 
-                />
-              </svg>
-            </div>
-            <span className="text-sm font-semibold text-background-dark">
-              Ai TOP TECHNOLOGIES
-            </span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-sm text-background-dark hover:text-primary-500 transition-colors"
-              >
-                {link.text}
-              </Link>
-            ))}
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-background-dark"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            aria-label="Toggle menu"
-          >
+    <header className="border-b border-solid border-primary/20 px-10 lg:px-40 py-5">
+      <div className="flex items-center justify-between whitespace-nowrap max-w-[1200px] mx-auto">
+        <Link
+          href="/"
+          className="flex items-center gap-4 text-text-primary hover:opacity-80 transition-opacity"
+        >
+          <div className="size-6 text-primary flex-shrink-0">
             <svg
-              className="w-6 h-6"
               fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              {mobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
+              <path
+                clipRule="evenodd"
+                d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z"
+                fill="currentColor"
+                fillRule="evenodd"
+              />
             </svg>
-          </button>
-        </div>
-
-        {/* Mobile Menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="block text-sm text-background-dark hover:text-primary-500 transition-colors"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                {link.text}
-              </Link>
-            ))}
           </div>
-        )}
-      </nav>
+          <h2 className="text-text-primary text-xl font-bold leading-tight tracking-tight">
+            Ai TOP TECHNOLOGIES
+          </h2>
+        </Link>
+        <nav className="flex flex-1 justify-end">
+          <div className="flex items-center gap-9">
+            <a
+              href="#page"
+              className="text-text-secondary hover:text-primary transition-colors text-sm font-medium leading-normal"
+            >
+              Skip to Content
+            </a>
+            <Link
+              href="/"
+              className="text-text-primary hover:text-primary transition-colors text-sm font-medium leading-normal"
+            >
+              Home
+            </Link>
+            <Link
+              href="/about"
+              className="text-text-secondary hover:text-primary transition-colors text-sm font-medium leading-normal"
+            >
+              About
+            </Link>
+            <Link
+              href="/contact"
+              className="text-text-secondary hover:text-primary transition-colors text-sm font-medium leading-normal"
+            >
+              Contact
+            </Link>
+          </div>
+        </nav>
+      </div>
     </header>
   );
 }

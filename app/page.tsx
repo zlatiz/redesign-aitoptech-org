@@ -1,55 +1,42 @@
-import HeroSection from "@/components/HeroSection";
-import ServiceCard from "@/components/ServiceCard";
-
-export default function Home() {
-  const services = [
-    {
-      title: "Core AI",
-      description: "Advanced machine learning models and neural networks for intelligent automation",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
-        </svg>
-      )
-    },
-    {
-      title: "Cloud Integration",
-      description: "Seamless deployment and scaling of AI applications across cloud platforms",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
-        </svg>
-      )
-    },
-    {
-      title: "Secure Processing",
-      description: "Enterprise-grade security with encrypted data processing and compliance",
-      icon: (
-        <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-        </svg>
-      )
-    }
-  ];
-
+export default function HomePage() {
   return (
     <>
-      <HeroSection />
-      
-      <section id="sections" className="max-w-7xl mx-auto px-6 py-20">
-        <h2 className="text-3xl md:text-4xl font-bold text-background-dark text-center mb-12">
-          Sections
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {services.map((service, index) => (
-            <ServiceCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-            />
-          ))}
+      {/* Hero Section */}
+      <section className="px-10 lg:px-40 py-5">
+        <div className="max-w-[1200px] mx-auto mt-8">
+          <div
+            className="flex min-h-[600px] flex-col gap-8 bg-cover bg-center bg-no-repeat rounded-xl items-center justify-center p-8 shadow-2xl relative overflow-hidden"
+            style={{
+              backgroundImage: `linear-gradient(rgba(17, 33, 23, 0.7), rgba(17, 33, 23, 0.8)), url("https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop")`,
+            }}
+          >
+            <h1 className="text-white text-5xl font-black leading-tight tracking-tight lg:text-7xl text-center max-w-4xl z-10">
+              Ai TOP TECHNOLOGIES
+            </h1>
+            <p className="text-slate-200 text-xl md:text-2xl text-center max-w-2xl font-light z-10 mb-4">
+              Pioneering intelligent solutions for a connected tomorrow.
+            </p>
+            <button className="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-8 bg-primary hover:bg-primary/90 transition-colors text-white text-base font-bold leading-normal tracking-wide shadow-lg z-10">
+              <span className="truncate">Discover Our Vision</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Corporate Identity Section */}
+      <section className="px-10 lg:px-40 py-16">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="border-l-4 border-primary pl-6">
+            <h2 className="text-text-primary text-3xl font-bold leading-tight tracking-tight pb-4 uppercase">
+              Corporate Identity
+            </h2>
+            <p className="text-text-secondary text-lg font-normal leading-relaxed max-w-3xl">
+              Ai Top Technologies LLC Registered in Delaware, USA. We are
+              committed to delivering cutting-edge artificial intelligence and
+              technological frameworks that empower enterprise-scale
+              transformation globally.
+            </p>
+          </div>
         </div>
       </section>
     </>
